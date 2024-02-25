@@ -11,6 +11,7 @@ const fadeIn = keyframes`
 
 const StyledWrapper = styled.div<{ $hide: boolean }>`
   display: ${(props) => (props.$hide ? 'none' : 'block')};
+  // display: none;
   animation: ${fadeIn} 0.2s ease-in-out;
 `;
 

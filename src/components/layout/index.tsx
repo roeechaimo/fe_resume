@@ -1,6 +1,7 @@
 import { useNavigationStore } from '../../store';
 import AppTitle from '../app-title';
 import Box from '../box';
+import Footer from '../footer';
 import AppNavItems from '../nav';
 import { NAV_ITEM_TO_PAGE } from '../nav/constants';
 import PageWrapper from '../page-wrapper';
@@ -16,6 +17,8 @@ function Layout() {
       <AppNavItems></AppNavItems>
 
       <PageWrapper>{pageToRender()}</PageWrapper>
+
+      <Footer />
     </Box>
   );
 }
