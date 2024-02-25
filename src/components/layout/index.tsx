@@ -1,4 +1,4 @@
-import { useNavigationStore } from '../../store';
+import { useStore } from '../../store';
 import AppTitle from '../app-title';
 import Box from '../box';
 import Footer from '../footer';
@@ -7,7 +7,7 @@ import { NAV_ITEM_TO_PAGE } from '../nav/constants';
 import PageWrapper from '../page-wrapper';
 
 function Layout() {
-  const currentPage = useNavigationStore((state) => state.currentPage);
+  const currentPage = useStore((state) => state.currentPage);
   const pageToRender = NAV_ITEM_TO_PAGE[currentPage];
 
   return (

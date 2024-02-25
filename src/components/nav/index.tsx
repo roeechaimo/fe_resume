@@ -1,10 +1,10 @@
-import { useNavigationStore } from '../../store';
+import { useStore } from '../../store';
 import Box from '../box';
 import { NAV_ITEMS } from './constants';
 import NavItem from './styled';
 
 function AppNavItems() {
-  const { currentPage, navigate } = useNavigationStore((state) => state);
+  const { currentPage, navigate } = useStore((state) => state);
 
   return (
     <nav>
