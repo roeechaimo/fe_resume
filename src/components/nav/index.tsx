@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useNavigationStore } from '../../store';
 import Box from '../box';
-import { NAV_ITEMS } from './config';
+import { NAV_ITEMS } from './constants';
 import NavItem from './styled';
 
 function AppNavItems() {
-  const [selectedItem, setSelectedItem] = useState(NAV_ITEMS.ABOUT_ME);
+  const { currentPage, navigate } = useNavigationStore((state) => state);
 
   return (
     <nav>
@@ -13,8 +13,8 @@ function AppNavItems() {
           return (
             <NavItem
               key={item}
-              $selected={selectedItem === item}
-              onClick={() => setSelectedItem(item)}
+              $selected={currentPage === item}
+              onClick={() => navigate(item)}
             >
               {item}
             </NavItem>
