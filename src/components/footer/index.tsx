@@ -16,7 +16,7 @@ function Footer() {
   }, [resumeUrl]);
 
   return (
-    <footer className='absolute bottom-40 left-0 right-0'>
+    <footer className='absolute bottom-40 max-sm:bottom-24 left-0 right-0'>
       <Box className='flex justify-center'>
         {Object.values(footerItems).map((item) => {
           return (
