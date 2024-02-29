@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {  
+:root {
   font-family: Inter, chewy;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 200;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

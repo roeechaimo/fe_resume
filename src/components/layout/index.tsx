@@ -1,4 +1,6 @@
 import { useStore } from '../../store';
+import Lightning from '../app-background/lightning';
+import Rain from '../app-background/rain';
 import AppTitle from '../app-title';
 import Box from '../box';
 import Footer from '../footer';
@@ -12,6 +14,10 @@ function Layout() {
 
   return (
     <Box>
+      <Lightning />
+
+      <Rain />
+
       <AppTitle text={"Roe'e Chaimowicz - Front-End Developer"} />
 
       <AppNavItems></AppNavItems>

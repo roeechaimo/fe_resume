@@ -3,6 +3,7 @@ import { NAV_ITEMS } from '../components/nav/constants';
 
 type NavigationState = {
   currentPage: NAV_ITEMS;
+  isLightning: boolean;
 };
 
 type StorageState = {
@@ -13,6 +14,7 @@ type State = NavigationState & StorageState;
 
 type NavigationActions = {
   navigate: (page: NAV_ITEMS) => void;
+  setIsLightning: (showLightning: boolean) => void;
 };
 
 type StorageActions = {
@@ -25,7 +27,11 @@ export const createNavigationSlice = (
   set: (arg0: (_state: NavigationState) => { currentPage: NAV_ITEMS }) => void
 ) => ({
   currentPage: NAV_ITEMS.ABOUT_ME,
-  navigate: (page: NAV_ITEMS) => set((_state) => ({ currentPage: page })),
+  isLightning: false,
+  navigate: (page: NAV_ITEMS) =>
+    set((state) => ({ ...state, currentPage: page })),
+  setIsLightning: (showLightning: boolean) =>
+    set((state) => ({ ...state, isLightning: showLightning })),
 });
 
 export const createStorageSlice = (
@@ -39,15 +45,3 @@ export const useStore = create<State & Actions>((set) => ({
   ...createNavigationSlice(set),
   ...createStorageSlice(set),
 }));
-
-// export const useNavigationStore = create<NavigationState & NavigationActions>(
-//   (set) => ({
-//     currentPage: NAV_ITEMS.ABOUT_ME,
-//     navigate: (page) => set((_state) => ({ currentPage: page })),
-//   })
-// );
-
-// export const useStorageStore = create<StorageState & StorageActions>((set) => ({
-//   resumeUrl: '',
-//   setResumeUrl: (url) => set((_state) => ({ resumeUrl: url })),
-// }));
