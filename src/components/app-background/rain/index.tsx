@@ -1,22 +1,22 @@
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
-const Splash = () => {
-  const splashControls = useAnimation();
+// const Splash = () => {
+//   const splashControls = useAnimation();
 
-  return (
-    <AnimatePresence>
-      <motion.div
-        className='splash absolute w-4 h-4 bg-blue-300 rounded-full'
-        initial={{ scale: 0, opacity: 0 }}
-        animate={splashControls} // Set initial animation values
-        exit={{ scale: 0, opacity: 0 }} // Ensure the splash disappears after animation
-        transition={{
-          duration: 0.1,
-        }}
-      />
-    </AnimatePresence>
-  );
-};
+//   return (
+//     <AnimatePresence>
+//       <motion.div
+//         className='splash absolute w-4 h-4 bg-blue-300 rounded-full'
+//         initial={{ scale: 0, opacity: 0 }}
+//         animate={splashControls} // Set initial animation values
+//         exit={{ scale: 0, opacity: 0 }} // Ensure the splash disappears after animation
+//         transition={{
+//           duration: 0.1,
+//         }}
+//       />
+//     </AnimatePresence>
+//   );
+// };
 
 const Rain = () => {
   const numDrops = 50; // Number of raindrops
