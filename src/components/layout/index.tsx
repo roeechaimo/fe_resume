@@ -27,7 +27,7 @@ function Layout() {
         transition={{ duration: 3, delay: 4 }}
       >
         <LightningButton
-          className='absolute top-20 right-0 left-0 flex justify-center'
+          className='absolute top-20 right-0 left-0 flex justify-center max-sm:top-10'
           text='Toggle lightning!'
         />
       </motion.div>

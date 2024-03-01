@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, chewy;
+  font-family: Chewy;
   line-height: 1.5;
   font-weight: 200;
 
@@ -38,6 +38,6 @@ h1 {
 }
 
 @font-face {
-  font-family: chewy;
-  src: url(./assets/Chewy.ttf);
+  font-family: Chewy;
+  src: url(./assets/fonts/Chewy.ttf);
 }
