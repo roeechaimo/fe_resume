@@ -1,18 +1,12 @@
+import useToggleLightning from '../../hooks/useToggleLightning';
 import { useStore } from '../../store';
 import Box from '../box';
 import { LIGHTNING_TIMEOUT, NAV_ITEMS } from './constants';
 import NavItem from './styled';
 
 function AppNavItems() {
-  const { currentPage, navigate, setIsLightning } = useStore((state) => state);
-
-  const toggleLightning = () => {
-    setIsLightning(true);
-
-    setTimeout(() => {
-      setIsLightning(false);
-    }, LIGHTNING_TIMEOUT);
-  };
+  const { currentPage, navigate } = useStore((state) => state);
+  const { toggleLightning } = useToggleLightning();
 
   const navigateToPage = (item: NAV_ITEMS) => {
     navigate(NAV_ITEMS.LIGHTNING);
