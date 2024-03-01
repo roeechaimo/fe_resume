@@ -28,14 +28,14 @@ const LightningBolt = ({
       >
         <g
           id='SVGRepo_bgCarrier'
-          stroke-width='0'
+          strokeWidth='0'
         ></g>
         <g
           id='SVGRepo_tracerCarrier'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeLinecap='round'
+          strokeLinejoin='round'
           stroke={color}
-          stroke-width='0.8300000000000001'
+          strokeWidth='0.8300000000000001'
         ></g>
         <g id='SVGRepo_iconCarrier'>
           {' '}

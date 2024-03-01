@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useStore } from '../../store';
 import Lightning from '../app-background/lightning';
 import Rain from '../app-background/rain';
@@ -9,7 +10,7 @@ import { NAV_ITEM_TO_PAGE } from '../nav/constants';
 import PageWrapper from '../page-wrapper';
 
 function Layout() {
-  const currentPage = useStore((state) => state.currentPage);
+  const { currentPage } = useStore((state) => state);
   const pageToRender = NAV_ITEM_TO_PAGE[currentPage];
 
   return (
@@ -18,13 +19,22 @@ function Layout() {
 
       <Rain />
 
-      <AppTitle text={"Roe'e Chaimowicz - Front-End Developer"} />
+      <AppTitle text="Roe'e Chaimowicz - Front-End Developer" />
 
-      <AppNavItems></AppNavItems>
+      <AnimatePresence>
+        <motion.div
+          key='content'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3, delay: 4 }}
+        >
+          <AppNavItems></AppNavItems>
 
-      <PageWrapper>{pageToRender()}</PageWrapper>
+          <PageWrapper>{pageToRender()}</PageWrapper>
 
-      <Footer />
+          <Footer />
+        </motion.div>
+      </AnimatePresence>
     </Box>
   );
 }
