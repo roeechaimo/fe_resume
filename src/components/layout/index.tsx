@@ -4,6 +4,7 @@ import Lightning from '../app-background/lightning';
 import Rain from '../app-background/rain';
 import AppTitle from '../app-title';
 import Box from '../box';
+import LightningButton from '../button/lightning';
 import Footer from '../footer';
 import AppNavItems from '../nav';
 import { NAV_ITEM_TO_PAGE } from '../nav/constants';
@@ -18,6 +19,18 @@ function Layout() {
       <Lightning />
 
       <Rain />
+
+      <motion.div
+        key='lightningButton'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3, delay: 4 }}
+      >
+        <LightningButton
+          className='absolute top-20 right-0 left-0 flex justify-center'
+          text='Toggle lightning!'
+        />
+      </motion.div>
 
       <AppTitle text="Roe'e Chaimowicz - Front-End Developer" />
 

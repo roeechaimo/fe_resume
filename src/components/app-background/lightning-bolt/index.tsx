@@ -5,6 +5,7 @@ type LightningBoltProps = {
   height: number;
   color: string;
   className?: React.ComponentProps<'div'>['className'];
+  onClick?: () => void;
 };
 
 const LightningBolt = ({
@@ -12,9 +13,13 @@ const LightningBolt = ({
   height,
   color,
   className,
+  onClick,
 }: LightningBoltProps) => {
   return (
-    <Box className={className}>
+    <Box
+      className={className}
+      onClick={onClick}
+    >
       <svg
         fill={color}
         height={height}

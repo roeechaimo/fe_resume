@@ -37,7 +37,7 @@ const Rain = () => {
         key={i}
         className='drop absolute w-px h-5 bg-blue-300 top-5'
         style={dropStyle}
-        initial={{ opacity: 0, y: -220 }}
+        initial={{ opacity: 0, y: -280 }}
         animate={{ opacity: 1, y: '70vh' }}
         transition={{
           duration,
