@@ -1,27 +1,28 @@
 import Box from '../../components/box';
+import Parargrapgh from './styles';
 
 const About = () => {
   return (
     <Box>
-      <Box>
+      <Parargrapgh>
         Experienced front-end developer with a solid understanding of
         server-side technologies.
-      </Box>
+      </Parargrapgh>
 
-      <Box>
+      <Parargrapgh>
         Dedicated to crafting engaging user interfaces for web and mobile
         platforms.
-      </Box>
+      </Parargrapgh>
 
-      <Box>
+      <Parargrapgh>
         Enthusiastic about continuous learning and staying updated on industry
         trends.
-      </Box>
+      </Parargrapgh>
 
-      <Box>
+      <Parargrapgh>
         I thrive as both an independent worker and a collaborative team member,
         always eager to share knowledge and insights with peers.
-      </Box>
+      </Parargrapgh>
     </Box>
   );
 };
