@@ -9,10 +9,13 @@ import Footer from '../footer';
 import AppNavItems from '../nav';
 import { NAV_ITEM_TO_PAGE } from '../nav/constants';
 import PageWrapper from '../page-wrapper';
+import { DISABLE_LIGHTNING_MAPPING } from './constants';
 
 function Layout() {
-  const { currentPage } = useStore((state) => state);
+  const { currentPage, lightningDisabled } = useStore((state) => state);
   const pageToRender = NAV_ITEM_TO_PAGE[currentPage];
+
+  const isDisabled = lightningDisabled.toString() as 'true' | 'false';
 
   return (
     <Box>
@@ -28,7 +31,7 @@ function Layout() {
       >
         <LightningButton
           className='absolute top-20 right-0 left-0 flex justify-center max-sm:top-10'
-          text='Toggle lightning!'
+          text={`Click to turn ${DISABLE_LIGHTNING_MAPPING[isDisabled]}`}
         />
       </motion.div>
 

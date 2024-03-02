@@ -5,17 +5,23 @@ import { LIGHTNING_TIMEOUT, NAV_ITEMS } from './constants';
 import NavItem from './styled';
 
 function AppNavItems() {
-  const { currentPage, navigate } = useStore((state) => state);
+  const { currentPage, navigate, lightningDisabled } = useStore(
+    (state) => state
+  );
   const { toggleLightning } = useToggleLightning();
 
   const navigateToPage = (item: NAV_ITEMS) => {
-    navigate(NAV_ITEMS.LIGHTNING);
+    if (!lightningDisabled) {
+      navigate(NAV_ITEMS.LIGHTNING);
 
-    setTimeout(() => {
+      setTimeout(() => {
+        navigate(item);
+
+        !lightningDisabled && toggleLightning();
+      }, LIGHTNING_TIMEOUT);
+    } else {
       navigate(item);
-
-      toggleLightning();
-    }, LIGHTNING_TIMEOUT);
+    }
   };
 
   return (
