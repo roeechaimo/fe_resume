@@ -15,7 +15,7 @@ const Projects = () => {
             className='flex pt-4'
           >
             <img
-              src='./outline_link_white_24dp.png'
+              src='./projects/outline_link_white_24dp.png'
               className='pe-4'
             />
 

@@ -1,32 +1,22 @@
-import Box from '../../components/box';
+import Carousle from '../../components/carousel';
+import ResumeItem from './ResumeItem';
 import { RESUME_ITEM } from './constants';
 
 const Resume = () => {
+  const resumeItems = Object.values(RESUME_ITEM).map((resItem) => (
+    <ResumeItem
+      key={resItem.title}
+      title={resItem.title}
+      description={resItem.description}
+      className='mb-4 text-center'
+    />
+  ));
+
   return (
-    <Box>
-      {Object.values(RESUME_ITEM).map((resItem) => {
-        return (
-          <Box
-            key={resItem.title}
-            className='mb-4'
-          >
-            <Box className='underline'>{resItem.title}</Box>
-
-            <Box className='underline'>Summary:</Box>
-
-            <Box className='text-xs'>{resItem.description.summary}</Box>
-
-            <Box className='underline'>Tech stack:</Box>
-
-            <Box className='text-xs'>
-              {resItem.description.stack.map((item) => (
-                <span key={item}>{`${item}, `}</span>
-              ))}
-            </Box>
-          </Box>
-        );
-      })}
-    </Box>
+    <Carousle
+      items={resumeItems}
+      className='text-center flex flex-col h-80 items-center justify-center m-auto'
+    />
   );
 };
 

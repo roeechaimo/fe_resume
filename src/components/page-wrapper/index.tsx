@@ -17,7 +17,9 @@ const PageWrapper = ({ children }: PageProps) => {
 
   return (
     <StyledWrapper $hide={hideWrapper}>
-      <Box className='flex flex-col text-start pt-2'>{children}</Box>
+      <Box className='page-wrapper flex flex-col text-start pt-2 h-96'>
+        {children}
+      </Box>
     </StyledWrapper>
   );
 };

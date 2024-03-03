@@ -1,6 +1,11 @@
+export type ResumeItemStack = {
+  text: string;
+  image: string;
+};
+
 export type RsumeItemDescription = {
   summary: string;
-  stack: string[];
+  stack: ResumeItemStack[];
 };
 
 export type ResumeItem = {
