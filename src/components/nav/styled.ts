@@ -5,6 +5,7 @@ const NavItem = styled.h3<{ $selected?: boolean }>`
   text-align: center;
   text-decoration: ${(props) =>
     props.$selected ? 'underline' : 'transparent'};
+  font-weight: ${(props) => (props.$selected ? '800' : 'initial')};
   transition: text-decoration 0.3s linear;
   padding: 0.2em;
   &:hover {

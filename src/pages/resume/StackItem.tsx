@@ -3,7 +3,7 @@ import { ResumeItemStack } from './types';
 
 type StackItemProps = ResumeItemStack;
 
-const StackItem = ({ text, image }: StackItemProps) => {
+const StackItem = ({ text }: StackItemProps) => {
   return (
     <Box className='flex items-center'>
       <Box className='flex  items-center w-full px-2'>
