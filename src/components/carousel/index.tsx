@@ -7,30 +7,27 @@ type CarousleProps = {
   className?: React.ComponentProps<'div'>['className'];
 };
 
-//TODO: make effect smoover
 const variants = {
-  enter: (direction: number) => {
+  enter: () => {
     return {
-      y: direction > 0 ? 120 : -220,
       opacity: 0,
+      scale: 0.2,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
       },
     };
   },
   center: {
     zIndex: 1,
-    y: 0,
+    scale: 1,
     opacity: 1,
   },
-  exit: (direction: number) => {
+  exit: () => {
     return {
       zIndex: 0,
-      y: direction < 0 ? 220 : -120,
       opacity: 0,
-      scale: 0.7,
       transition: {
-        duration: 0.2,
+        duration: 0,
       },
     };
   },
