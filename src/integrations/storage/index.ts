@@ -30,7 +30,7 @@ const getfileFromstorage = (callback: (url: string) => void) => {
   const storageRef = ref(storage);
 
   // Create a reference to the file we want to download
-  const resumeRef = ref(storageRef, "Roe'e Chaimowicz_Frontend developer.pdf");
+  const resumeRef = ref(storageRef, import.meta.env.VITE_RESUME_FILE_REF);
 
   // Get the download URL
   getDownloadURL(resumeRef)
