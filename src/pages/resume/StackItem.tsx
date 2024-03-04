@@ -12,7 +12,7 @@ const StackItem = ({ text }: StackItemProps) => {
           className='max-h-10 max-w-10 mr-2'
         />
 
-        <span>{`${text}, `}</span>
+        <span>{text}</span>
       </Box>
     </Box>
   );

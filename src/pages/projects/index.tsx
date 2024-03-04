@@ -4,10 +4,6 @@ import { PROJECT_LINKS } from './constants';
 const Projects = () => {
   return (
     <Box className='z-10'>
-      <Box className='underline flex justify-center'>
-        You can Click on the relevant link
-      </Box>
-
       {Object.values(PROJECT_LINKS).map((item) => {
         return (
           <Box

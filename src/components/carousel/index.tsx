@@ -7,6 +7,7 @@ type CarousleProps = {
   className?: React.ComponentProps<'div'>['className'];
 };
 
+//TODO: make effect smoover
 const variants = {
   enter: (direction: number) => {
     return {

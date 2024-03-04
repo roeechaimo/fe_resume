@@ -2,6 +2,7 @@ import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
 
 // Your web app's Firebase configuration
+//TODO: move api keys to env var
 const firebaseConfig = {
   apiKey: 'AIzaSyAuHBSNGO0d9k2WOUlHmblEpBmxUh7vjx0',
   authDomain: 'roe-e-chaimowicz.firebaseapp.com',
