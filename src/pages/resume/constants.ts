@@ -17,7 +17,7 @@ export const RESUME_ITEM = {
   INMANAGE: {
     title: '2019-2022 Front-end developer at ”Inmanage”.',
     description: {
-      summary: 'Created and maintained hybrid and native mobile apps.',
+      summary: 'Developed and maintained hybrid and native mobile apps.',
       stack: [
         { text: 'React Native', image: './resume/icons8-react-js-100.png' },
         { text: 'Firebase', image: './resume/icons8-firebase-48.png' },
@@ -27,7 +27,7 @@ export const RESUME_ITEM = {
   RESTART: {
     title: '2017-2018 Full stack developer at “Restart Group”.',
     description: {
-      summary: 'Developed and maintained large-scale web systems',
+      summary: 'Developed and maintained large-scale web systems.',
       stack: [
         { text: 'HTML', image: './resume/icons8-html-50.png' },
         { text: 'CSS', image: './resume/icons8-css-49.png' },
