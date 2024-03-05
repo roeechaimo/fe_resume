@@ -32,7 +32,7 @@ export const RESUME_ITEM = {
         { text: 'HTML', image: './resume/icons8-html-50.png' },
         { text: 'CSS', image: './resume/icons8-css-49.png' },
         {
-          text: 'Vanilla JavaScript',
+          text: 'JavaScript',
           image: './resume/icons8-javascript-64.png',
         },
         { text: 'Angular', image: './resume/icons8-angular-50.png' },
