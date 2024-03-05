@@ -19,6 +19,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     <Title
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      $size='16rem'
     >
       {splitText.map((char, index) => (
         <motion.span

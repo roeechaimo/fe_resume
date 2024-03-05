@@ -27,7 +27,7 @@ function Layout() {
         key='lightningButton'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3, delay: 2 }}
+        transition={{ duration: 3, delay: 4 }}
       >
         <LightningButton
           className='absolute top-20 right-0 left-0 flex justify-center max-sm:top-10'
@@ -35,16 +35,14 @@ function Layout() {
         />
       </motion.div>
 
-      <AppTitle text="Roe'e Chaimowicz" />
-
-      <AppTitle text='Front-End Developer' />
+      <AppTitle text="Roe'e Chaimowicz Front-End Developer" />
 
       <AnimatePresence>
         <motion.div
           key='content'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 3, delay: 2 }}
+          transition={{ duration: 3, delay: 4 }}
         >
           <AppNavItems></AppNavItems>
 
