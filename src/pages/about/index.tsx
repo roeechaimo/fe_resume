@@ -5,8 +5,8 @@ const About = () => {
   return (
     <Box>
       <Parargrapgh>
-        Experienced front-end developer with a solid understanding of
-        server-side technologies.
+        A software developer experienced in both front-end and server-side
+        technologies.
       </Parargrapgh>
 
       <Parargrapgh>
