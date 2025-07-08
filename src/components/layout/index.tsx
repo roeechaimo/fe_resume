@@ -35,7 +35,7 @@ function Layout() {
         />
       </motion.div>
 
-      <AppTitle text="Roe'e Chaimowicz Software Developer" />
+      <AppTitle text="Roe'e Chaimowicz Software Engineer" />
 
       <AnimatePresence>
         <motion.div

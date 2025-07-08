@@ -5,7 +5,7 @@ const About = () => {
   return (
     <Box>
       <Parargrapgh>
-        A software developer experienced in both front-end and server-side
+        A software engineer experienced in both front-end and server-side
         technologies.
       </Parargrapgh>
 
