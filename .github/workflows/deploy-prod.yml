@@ -1,0 +1,38 @@
+name: Build and Deploy to Prod
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+      VITE_AUTH_DOMAIN: ${{ secrets.VITE_AUTH_DOMAIN }}
+      VITE_DATABASE_URL: ${{ secrets.VITE_DATABASE_URL }}
+      VITE_PROJECT_ID: ${{ vars.VITE_PROJECT_ID }}
+      VITE_STORAGE_BUCKET: ${{ secrets.VITE_STORAGE_BUCKET }}
+      VITE_MESSAGING_SENDER_ID: ${{ secrets.VITE_MESSAGING_SENDER_ID }}
+      VITE_APP_ID: ${{ secrets.VITE_APP_ID }}
+      VITE_RESUME_FILE_REF: ${{ secrets.VITE_RESUME_FILE_REF }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Prod
+        run: npm run deploy-prod
